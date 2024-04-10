@@ -1,0 +1,63 @@
+.sign-logo {
+    height: var(--h-height);
+    width: var(--h-height);
+    margin: 1.5rem;
+    position: fixed;
+    left: 0;
+
+    .logo {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    .sign-logo {
+        width: 3rem;
+        height: 3rem;
+        margin: 5%;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 60rem) {
+    .sign-logo {
+        position: absolute;
+    }
+}
+
+
+@keyframes grow {
+    0% {
+        stroke-dashoffset: 1px;
+        stroke-dasharray: 0 3000px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        stroke-dasharray: 3000px 0;
+    }
+
+    /* Moving back */
+    75% {
+        stroke-dasharray: 3000px 0;
+    }
+
+    95%,
+    to {
+        stroke-dasharray: 0 3000px;
+    }
+}
+
+path {
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 3000px 0;
+    animation: grow 9s ease forwards infinite;
+    transform-origin: center;
+    stroke: var(--c-title);
+    animation-delay: 0s;
+}

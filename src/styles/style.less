@@ -1,0 +1,90 @@
+@import "./resize.less";
+@import "./theme.less";
+
+@import "./adapt.less";
+
+//子元素居中
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//内容居中
+.content-center {
+  margin: auto;
+  max-width: 50rem;
+}
+
+//遮罩居中
+.img-center {
+  --icon: url('');
+  mask: var(--icon) no-repeat;
+  mask-size: 100%;
+  color: inherit;
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: auto;
+  height: auto;
+}
+
+//hover变深样式
+.dark-hover {
+  color: inherit;
+  transition: color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #3e3e3e;
+  }
+}
+
+//下划线hover变深样式
+.dash-hover {
+  border-bottom: 2px solid;
+  transition: border-bottom-color 0.3s;
+  border-bottom-color: rgba(125, 125, 125, 0.3);
+
+  &:hover {
+    border-bottom-color: rgba(125, 125, 125, 1);
+  }
+}
+
+.slide-enter {
+  animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pointer {
+  position: absolute;
+  user-select: none;
+  border-radius: 50%;
+  border: 1px solid var(--c);
+  animation: wave 0.3s forwards;
+  transform: translate(-50%, -50%);
+
+  @keyframes wave {
+    0% {
+      width: 0;
+      height: 0;
+    }
+
+    100% {
+      // transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

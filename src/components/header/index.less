@@ -1,0 +1,75 @@
+header {
+    --h-height: 3rem;
+    width: 100%;
+
+    @media screen and (max-width: 50rem) {
+        --h-height: 2.5rem;
+
+        nav {
+            padding: 15% 0;
+        }
+    }
+
+    nav {
+        // height: var(--h-height);
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: auto max-content;
+        box-sizing: border-box;
+        padding: 2rem;
+
+        a {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .right {
+            display: grid;
+            grid-gap: 1.2rem;
+            grid-auto-flow: column;
+        }
+    }
+
+    .github {
+        --icon: url('../assets/img/github.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .blogs {
+        --icon: url('../assets/img/blogs.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .projects {
+        --icon: url('../assets/img/projects.svg');
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .gitee {
+        --icon: url('../assets/img/Gitee-icon.svg');
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .changeLang {
+        --icon: url('../assets/img/lang-change.svg');
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .sun {
+        --icon: url('../assets/img/sun.svg');
+        width: 1.5rem;
+        height: 1.4rem;
+    }
+
+    .gohome {
+        --icon: url('../assets/img/gohome.svg');
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+}
